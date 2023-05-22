@@ -18,5 +18,13 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Build and Test
-        run: bash ./gradlew clean test --stacktrace
+      - name: Build
+        run: bash ./gradlew  ./gradlew assembleApkstorRelease
+      
+      
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v3.1.2
+        with: 
+          path: "./presentation/build/outputs/apk/apkstore/release/*.apk"
+        
+        
