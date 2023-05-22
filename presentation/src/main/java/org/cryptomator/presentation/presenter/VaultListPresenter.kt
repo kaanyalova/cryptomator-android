@@ -122,6 +122,7 @@ class VaultListPresenter @Inject constructor( //
 	}
 
 	private fun checkLicense() {
+		/*
 		if (BuildConfig.FLAVOR == "apkstore" || BuildConfig.FLAVOR == "fdroid" || BuildConfig.FLAVOR == "lite") {
 			licenseCheckUseCase //
 				.withLicense("") //
@@ -150,7 +151,7 @@ class VaultListPresenter @Inject constructor( //
 						}
 					}
 				})
-		}
+		} */
 	}
 
 	private fun checkForAppUpdates() {
